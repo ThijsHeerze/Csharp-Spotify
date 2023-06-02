@@ -1,44 +1,61 @@
 ﻿using System;
 using System.IO.Pipes;
 
-public class Songs
+public class Song
 {
-    private string song;
-	private string title;
-	private string artist;
-	private string genre;
+    private string song { get; set; }
+    private string title { get; set; }
+    private string artist { get; set; }
+	private string genre { get; set; }
 
-    public Songs()
+    public Song(string title)
     {
-        string[] title = { "Lucid Dreams", "Shape Of You", "SICKO MODE", "Tyler Hero", "Sky", "Rich Spirit", "Make No Sense", "The Real Slim Shady" };
+        this.title = title;
 
-        Artist artist = new Artist();
-        
-
+        bool y = true;
+        bool n = false;
+        string answer;
+        //string[] title = { "Lucid Dreams", "Shape Of You", "SICKO MODE", "Tyler Hero", "Sky", "Rich Spirit", "Make No Sense", "The Real Slim Shady" };
+        //Artist artist = new Artist();
+        //title = "Lucid Dreams";
+        //artist = "Juice WRLD";
     }
 
     public void getSong(string song)
     {
         this.song = song;
     }
-	public void PlayPause(string title)
+	public void PlayPause(bool y, bool n)
 	{
+        
+
         Console.WriteLine("The song " + title + " by " + artist + " is playing");
         Thread.Sleep(1000);
 
-        bool y = true;
-        bool n = false;
+        while (true)
+        {
+            Console.WriteLine("Play this song(y/n)?");
+            Console.ReadLine();
+            if (y)
+            {
+                Console.WriteLine("Song is playing");
+            } else
+            {
+                Console.WriteLine("Song is paused");
+            }
+        }
+        
+    }
 
-        Console.WriteLine("Play this song(y/n)?");
+    public void Next(bool y, bool n)
+    {
+        if (y) { 
+        Console.WriteLine("Next song(y/n)?");
         Console.ReadLine();
-        if (y)
-        {
-            Console.WriteLine("Song is playing");
-        }
-        if (n)
-        {
-            Console.WriteLine("Song is paused");
-        }
+    } if (y)
+            {
+                Console.WriteLine("The song " + title + " by " + artist + " is playing");
+            }
     }
 
     public void Shuffle()
@@ -57,5 +74,15 @@ public class Songs
         } if (n) {
             Console.WriteLine("Shuffle mode off");
         }
+    }
+
+    internal void PlayPause()
+    {
+        throw new NotImplementedException();
+    }
+
+    internal void Next()
+    {
+        throw new NotImplementedException();
     }
 }

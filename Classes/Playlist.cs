@@ -2,6 +2,8 @@
 
 public class Playlist
 {
+    public string playlistId { get; set; }
+    public string name { get; set; }
 	public Playlist()
 	{
 
@@ -9,7 +11,7 @@ public class Playlist
 
     public void getPlaylist ()
     {
-        Playlist playlist = new Playlist();
+        
     }
 
     public void setPlaylist(Playlist playlist)

@@ -2,14 +2,29 @@
 
 public class Artist
 {
-	public Artist()
-	{
-		string[] artist = { "Juice WRLD", "Ed Sheeran", "Travis Scott", "Jack Harlow", "Playboi Carti", "Kendrick Lamar", "NBA Youngboy", "Eminem" };
-	}
+	public string artistName { get; set; }
+	public string song { get; set; }
+	public string album { get; set; }
 
-	public void getArtist()
+	//List<string> artistList = new List<string>();
+    //List<string> songList = new List<string>();
+    //List<string> albumList = new List<string>();
+
+    public Artist(string artistName, string song, string album)
 	{
-		Artist artist = new Artist();
+		this.artistName = artistName;
+		this.song = song;
+		this.album = album;
+
+		string[] name = {};
+		string[] songs = {};
+		string[] albums = {};
+		
+    }
+
+	public string getArtist()
+	{
+		return artistName;
 	}
 
 	public void setArtist(Artist artist)
