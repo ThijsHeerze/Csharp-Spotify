@@ -2,33 +2,42 @@
 
 public class Artist
 {
-	public string artistName { get; set; }
+	public string name { get; set; }
 	public string song { get; set; }
 	public string album { get; set; }
+	public int id { get; set; }
 
-	//List<string> artistList = new List<string>();
-    //List<string> songList = new List<string>();
-    //List<string> albumList = new List<string>();
-
-    public Artist(string artistName, string song, string album)
+	//constructor
+    public Artist(int id, string name)
 	{
-		this.artistName = artistName;
-		this.song = song;
-		this.album = album;
+		this.id = 0;
+		this.name = name;
+		this.song
 
 		string[] name = {};
 		string[] songs = {};
 		string[] albums = {};
+		int[] id = {};
 		
     }
 
 	public string getArtist()
 	{
-		return artistName;
+		return name;
 	}
 
 	public void setArtist(Artist artist)
 	{
-
+		artist.setArtist(this);
 	}
+
+	public string ShowSongs()
+	{
+		return song;
+	}
+    public string ShowAlbums()
+    {
+        return album;
+    }
+
 }

@@ -2,20 +2,27 @@
 
 public class Playlist
 {
-    public string playlistId { get; set; }
-    public string name { get; set; }
-	public Playlist()
+    public int playlistId { get; set; }
+    public string playlistName { get; set; }
+	public Playlist(int playlistId, string playlistName)
 	{
-
+        this.playlistId = playlistId;
+        this.playlistName = playlistName;
 	}
 
-    public void getPlaylist ()
+    public string getPlaylist()
     {
-        
+        return playlistName;
     }
 
     public void setPlaylist(Playlist playlist)
     {
 
+    }
+
+    public string CreatePlaylist()
+    {
+        Console.WriteLine("");
+        return playlistName;
     }
 }

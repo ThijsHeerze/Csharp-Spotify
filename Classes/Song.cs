@@ -3,10 +3,11 @@ using System.IO.Pipes;
 
 public class Song
 {
+
     private string song { get; set; }
-    private string title { get; set; }
-    private string artist { get; set; }
-	private string genre { get; set; }
+    public string title { get; set; }
+    public string artist { get; set; }
+	public string genre { get; set; }
 
     public Song(string title)
     {
@@ -74,15 +75,5 @@ public class Song
         } if (n) {
             Console.WriteLine("Shuffle mode off");
         }
-    }
-
-    internal void PlayPause()
-    {
-        throw new NotImplementedException();
-    }
-
-    internal void Next()
-    {
-        throw new NotImplementedException();
     }
 }

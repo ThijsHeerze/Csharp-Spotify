@@ -2,20 +2,20 @@
 
 public class User
 {
-	public string userName { get; set; }
+	public string name { get; set; }
 	public User()
 	{
 		
 	}
 
-	public string AddFriend()
+	public string getUser()
 	{
-		return "Added friend";
+		return name;
 	}
 
-	public string DeleteFriend()
+	public void setUser(User user)
 	{
-		return "Deleted friend";
+
 	}
 
 
