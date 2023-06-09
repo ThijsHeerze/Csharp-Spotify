@@ -3,11 +3,10 @@ using System.IO.Pipes;
 
 public class Song
 {
-
-    private string song { get; set; }
     public string title { get; set; }
     public string artist { get; set; }
 	public string genre { get; set; }
+    public string duration { get; set; }
 
     public Song(string title)
     {
@@ -16,15 +15,11 @@ public class Song
         bool y = true;
         bool n = false;
         string answer;
-        //string[] title = { "Lucid Dreams", "Shape Of You", "SICKO MODE", "Tyler Hero", "Sky", "Rich Spirit", "Make No Sense", "The Real Slim Shady" };
-        //Artist artist = new Artist();
-        //title = "Lucid Dreams";
-        //artist = "Juice WRLD";
     }
 
-    public void getSong(string song)
+    public void getSong(string title)
     {
-        this.song = song;
+        this.title = title;
     }
 	public void PlayPause(bool y, bool n)
 	{

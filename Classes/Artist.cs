@@ -5,20 +5,13 @@ public class Artist
 	public string name { get; set; }
 	public string song { get; set; }
 	public string album { get; set; }
-	public int id { get; set; }
 
 	//constructor
-    public Artist(int id, string name)
+    public Artist(string name, string song, string album)
 	{
-		this.id = 0;
 		this.name = name;
-		this.song
-
-		string[] name = {};
-		string[] songs = {};
-		string[] albums = {};
-		int[] id = {};
-		
+		this.song = song;
+		this.album = album;
     }
 
 	public string getArtist()

@@ -4,6 +4,7 @@ public class Playlist
 {
     public int playlistId { get; set; }
     public string playlistName { get; set; }
+    List<Song> songs = new List<Song>();
 	public Playlist(int playlistId, string playlistName)
 	{
         this.playlistId = playlistId;
@@ -20,9 +21,8 @@ public class Playlist
 
     }
 
-    public string CreatePlaylist()
+    public void AddSongs(Song song)
     {
-        Console.WriteLine("");
-        return playlistName;
+        songs.Add(song);
     }
 }
