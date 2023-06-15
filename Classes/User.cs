@@ -2,15 +2,17 @@
 
 public class User
 {
-	public string name { get; set; }
-	public User()
+	public string userName { get; set; }
+    List<User> users = new List<User>();
+	public User(string userName)
 	{
-		
+		this.userName = userName;
+
 	}
 
 	public string getUser()
 	{
-		return name;
+		return userName;
 	}
 
 	public void setUser(User user)

@@ -5,13 +5,12 @@ public class Album
 {
     public string artist { get; set; }
 	public string title { get; set; }
-	public string album { get; set; }
-    public string songs { get; set; }
-    public Album(, string artist, string title, string songs)
+    List<Song> songs = new List<Song>();
+
+    public Album(string artist, string title)
     {
         this.artist = artist;
         this.title = title;
-        this.songs = songs;
 	}
     public string getAlbum()
     {

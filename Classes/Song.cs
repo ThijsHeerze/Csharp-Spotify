@@ -8,22 +8,27 @@ public class Song
 	public string genre { get; set; }
     public string duration { get; set; }
 
-    public Song(string title)
+    public Song(string title, string artist, string genre, string duration)
     {
         this.title = title;
+        this.artist = artist;
+        this.genre = genre;
+        this.duration = duration;
+    }
 
+    public string getSong()
+    {
+        return title;
+    }
+
+    public void setSong(Song song)
+    {
+        
+    }
+	public void PlayPause()
+	{
         bool y = true;
         bool n = false;
-        string answer;
-    }
-
-    public void getSong(string title)
-    {
-        this.title = title;
-    }
-	public void PlayPause(bool y, bool n)
-	{
-        
 
         Console.WriteLine("The song " + title + " by " + artist + " is playing");
         Thread.Sleep(1000);
@@ -43,8 +48,11 @@ public class Song
         
     }
 
-    public void Next(bool y, bool n)
+    public void Next()
     {
+        bool y = true;
+        bool n = false;
+
         if (y) { 
         Console.WriteLine("Next song(y/n)?");
         Console.ReadLine();
