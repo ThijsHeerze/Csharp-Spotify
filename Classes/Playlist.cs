@@ -25,4 +25,9 @@ public class Playlist
     {
         songs.Add(song);
     }
+
+    public string ShowPlaylist()
+    {
+        return playlistName;
+    }
 }

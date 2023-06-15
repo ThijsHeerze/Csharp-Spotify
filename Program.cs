@@ -23,9 +23,9 @@ namespace Spotify
                     playlist1.AddSongs(new Song("Lose Yourself"));
                     break;
 
-
                 case 2:
-
+                    Console.WriteLine();
+                    //playlist.ShowPlaylist();
 
                     break;
 
