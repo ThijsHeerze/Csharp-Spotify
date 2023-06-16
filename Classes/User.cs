@@ -2,12 +2,13 @@
 
 public class User
 {
+	public int userId { get; set; }
 	public string userName { get; set; }
     List<User> users = new List<User>();
-	public User(string userName)
+	public User(int userId, string userName)
 	{
+		this.userId = userId;
 		this.userName = userName;
-
 	}
 
 	public string getUser()

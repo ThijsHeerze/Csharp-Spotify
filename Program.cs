@@ -42,7 +42,7 @@ namespace Spotify
 
             List<User> users = new List<User>();
 
-            User user = new User("");
+            User user = new User(0,"");
             user.getUser();
 
             Console.WriteLine("1: Do you want to create a playlist?");
@@ -50,7 +50,8 @@ namespace Spotify
             Console.WriteLine("3: Do you want to play a song?");
             Console.WriteLine("4: Do you want to listen to an album?");
             Console.WriteLine("5: Do you want to listen to an artist?");
-            Console.WriteLine("6: Go to friendlist");
+            Console.WriteLine("6: Do you want to add a user?");
+            Console.WriteLine("7: Do you want to select a user?");
 
             
 
@@ -59,8 +60,6 @@ namespace Spotify
                 switch (option)
                 {
                     case 1:
-
-                        Console.WriteLine();
                         Playlist playlist1 = new Playlist(1, "Rap");
                         playlist1.AddSongs(new Song("Lose Yourself", "Eminem", "rap", "5:12"));
                         playlist1.AddSongs(new Song("Fair Trade (with Travis Scott)", "Drake featuring Travis Scott", "rap", "3:42"));
@@ -121,22 +120,28 @@ namespace Spotify
                         break;
 
                     case 6:
-
-                        Console.WriteLine("1: ");
-                        User user1 = new User("Thijs");
-                        Playlist playlist4 = new Playlist(2, "Pop");
+                        User user1 = new User(1, "Thijs");
+                        Playlist playlist4 = new Playlist(1, "Rap");
                         Playlist playlist5 = new Playlist(2, "Pop");
-                        Playlist playlist6 = new Playlist(2, "Pop");
-                        User user2 = new User("Floor");
-                        Playlist playlist7 = new Playlist(2, "Pop");
+                        Playlist playlist6 = new Playlist(3, "Gym");
+                        User user2 = new User(2, "Floor");
+                        Playlist playlist7 = new Playlist(1, "Dance");
                         Playlist playlist8 = new Playlist(2, "Pop");
-                        Playlist playlist9 = new Playlist(2, "Pop");
-                        User user3 = new User("Marijn");
-                        Playlist playlist10 = new Playlist(2, "Pop");
-                        Playlist playlist11 = new Playlist(2, "Pop");
-                        Playlist playlist12 = new Playlist(2, "Pop");
-
+                        Playlist playlist9 = new Playlist(3, "Summer");
+                        User user3 = new User(3, "Marijn");
+                        Playlist playlist10 = new Playlist(1, "Marijn");
+                        Playlist playlist11 = new Playlist(2, "Marijnslijst");
+                        Playlist playlist12 = new Playlist(3, "Pop");
                         Console.ReadLine();
+
+                        foreach (User _user in users)
+                        {
+                            Console.WriteLine(_user);
+                        }
+                        break;
+                    case 7:
+
+                        Console.WriteLine();
                         break;
                 }
             }
