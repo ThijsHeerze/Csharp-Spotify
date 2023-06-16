@@ -14,11 +14,4 @@ public class User
 	{
 		return userName;
 	}
-
-	public void setUser(User user)
-	{
-
-	}
-
-
 }

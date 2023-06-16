@@ -21,10 +21,6 @@ public class Song
         return title;
     }
 
-    public void setSong(Song song)
-    {
-        
-    }
 	public void PlayPause()
 	{
         bool y = true;

@@ -14,13 +14,6 @@ public class Album
 	}
     public string getAlbum()
     {
-        return album;
         return title;
-        return songs;
-    }
-
-    public void setAlbum(Album album)
-    {
-
     }
 }

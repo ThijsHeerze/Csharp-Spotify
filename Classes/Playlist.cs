@@ -16,11 +16,6 @@ public class Playlist
         return playlistName;
     }
 
-    public void setPlaylist(Playlist playlist)
-    {
-
-    }
-
     public void AddSongs(Song song)
     {
         songs.Add(song);

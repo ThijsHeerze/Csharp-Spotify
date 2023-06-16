@@ -19,11 +19,6 @@ public class Artist
 		return name;
 	}
 
-	public void setArtist(Artist artist)
-	{
-		artist.setArtist(this);
-	}
-
 	public string ShowSongs()
 	{
 		return song;
