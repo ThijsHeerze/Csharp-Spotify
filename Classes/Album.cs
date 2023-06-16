@@ -5,7 +5,6 @@ public class Album
 {
     public string artist { get; set; }
 	public string title { get; set; }
-    List<Song> songs = new List<Song>();
 
     public Album(string artist, string title)
     {

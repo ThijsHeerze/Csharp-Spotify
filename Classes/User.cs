@@ -4,11 +4,12 @@ public class User
 {
 	public int userId { get; set; }
 	public string userName { get; set; }
-    List<User> users = new List<User>();
-	public User(int userId, string userName)
+	public string userPlaylists { get; set; }
+	public User(int userId, string userName, string userPlaylists)
 	{
 		this.userId = userId;
 		this.userName = userName;
+		this.userPlaylists = userPlaylists;
 	}
 
 	public string getUser()

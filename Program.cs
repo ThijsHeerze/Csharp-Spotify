@@ -42,7 +42,7 @@ namespace Spotify
 
             List<User> users = new List<User>();
 
-            User user = new User(0,"");
+            User user = new User(0,"", "");
             user.getUser();
 
             Console.WriteLine("1: Do you want to create a playlist?");
@@ -50,10 +50,8 @@ namespace Spotify
             Console.WriteLine("3: Do you want to play a song?");
             Console.WriteLine("4: Do you want to listen to an album?");
             Console.WriteLine("5: Do you want to listen to an artist?");
-            Console.WriteLine("6: Do you want to add a user?");
-            Console.WriteLine("7: Do you want to select a user?");
-
-            
+            Console.WriteLine("6: Do you want to select a user?");
+            Console.WriteLine("7: Do you want to add a user?");
 
             while (true) {
                 int option = Convert.ToInt32(Console.ReadLine());
@@ -91,57 +89,69 @@ namespace Spotify
 
                     case 3:
                         Console.WriteLine("What song do you want to listen to?");
-                        Console.ReadLine();
+                        
                         foreach (Song _song in songlist)
                         {
                             Console.WriteLine(_song.title);
                         }
-
+                        Console.ReadLine();
+                        Console.WriteLine("Song " + song.title + "is playing");
                         break;
 
                     case 4:
                         Console.WriteLine("What album do you want to listen to?");
-                        Console.ReadLine();
+                        
                         foreach (Album _album in albumlist)
                         {
                             Console.WriteLine(_album.title);
                         }
-
+                        Console.ReadLine();
+                        Console.WriteLine("Album " + album.title + "is playing");
                         break;
 
                     case 5:
                         Console.WriteLine("Who do you want to listen to?");
-                        Console.ReadLine();
+                        
                         foreach (Artist _artist in artistlist)
                         {
                             Console.WriteLine(_artist.name);
                         }
-
+                        Console.ReadLine();
+                        Console.WriteLine("Artist " + artist.name + "playing");
                         break;
 
                     case 6:
-                        User user1 = new User(1, "Thijs");
+                        Console.WriteLine("Select an user");
+                        foreach (User _user in users)
+                        {
+                            Console.WriteLine(_user.userName);
+                        }
+                        
+                        User user1 = new User(1, "Thijs", "");
                         Playlist playlist4 = new Playlist(1, "Rap");
                         Playlist playlist5 = new Playlist(2, "Pop");
                         Playlist playlist6 = new Playlist(3, "Gym");
-                        User user2 = new User(2, "Floor");
+                        User user2 = new User(2, "Floor", "");
                         Playlist playlist7 = new Playlist(1, "Dance");
                         Playlist playlist8 = new Playlist(2, "Pop");
                         Playlist playlist9 = new Playlist(3, "Summer");
-                        User user3 = new User(3, "Marijn");
+                        User user3 = new User(3, "Marijn", "");
                         Playlist playlist10 = new Playlist(1, "Marijn");
                         Playlist playlist11 = new Playlist(2, "Marijnslijst");
                         Playlist playlist12 = new Playlist(3, "Pop");
-                        Console.ReadLine();
 
-                        foreach (User _user in users)
-                        {
-                            Console.WriteLine(_user);
-                        }
+                        
+                        Console.ReadLine();
+                        Console.WriteLine("User" + user.userName + "selected");
                         break;
                     case 7:
-
-                        Console.WriteLine();
+                        Console.WriteLine("Add user");
+                        foreach (User _user in users)
+                        {
+                            Console.WriteLine(_user.userPlaylists);
+                        }
+                        Console.ReadLine();
+                        
                         break;
                 }
             }
