@@ -5,7 +5,7 @@ public class Song
 {
     public string title { get; set; }
     public string artist { get; set; }
-	public string genre { get; set; }
+    public string genre { get; set; }
     public string duration { get; set; }
 
     public Song(string title, string artist, string genre, string duration)
@@ -20,50 +20,29 @@ public class Song
     {
         return title;
     }
-
-	public void PlayPause()
-	{
-        bool y = true;
-        bool n = false;
-
-        Console.WriteLine("The song " + title + " by " + artist + " is playing");
-        Thread.Sleep(1000);
-
-        while (true)
+    //alles met int
+    public void PlayPause()
+    {
+        Console.WriteLine("1: Pause");
+        if (true)
         {
-            Console.WriteLine("Play this song(y/n)?");
-            Console.ReadLine();
-            if (y)
-            {
-                Console.WriteLine("Song is playing");
-            } else
-            {
-                Console.WriteLine("Song is paused");
-            }
+            Console.WriteLine("Song is paused");
         }
-        
     }
 
     public void Next()
     {
-        bool y = true;
-        bool n = false;
 
-        if (y) { 
-        Console.WriteLine("Next song(y/n)?");
+        Console.WriteLine("2: Next");
         Console.ReadLine();
-    } if (y)
-            {
-                Console.WriteLine("The song " + title + " by " + artist + " is playing");
-            }
     }
 
     public void Shuffle()
     {
-        Console.WriteLine("Do you want to shuffle?(y/n)");
-        bool y = true;
-        bool n = false;
-        if (y)
+        Console.WriteLine("3: Shuffle");
+
+
+        if (true)
         {
             Random random = new Random();
             for (int j = 0; j < 4; j++)
@@ -71,7 +50,11 @@ public class Song
                 Console.WriteLine(random.Next());
                 Console.WriteLine("Shuffle mode on");
             }
-        } if (n) {
+
+            
+
+        } else
+        {
             Console.WriteLine("Shuffle mode off");
         }
     }

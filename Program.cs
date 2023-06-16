@@ -15,9 +15,7 @@ namespace Spotify
 
             Song song = new Song("", "", "", "");
             song.getSong();
-            /*song.PlayPause();
-            song.Next();
-            song.Shuffle();*/
+            
 
             List<Album> albumlist = new List<Album>();
             albumlist.Add(new Album("Juice WRLD", "Goodbye & Good Riddance"));
@@ -94,8 +92,12 @@ namespace Spotify
                         {
                             Console.WriteLine(_song.title);
                         }
+                        
                         Console.ReadLine();
                         Console.WriteLine("Song " + song.title + "is playing");
+                        song.PlayPause();
+                        song.Next();
+                        song.Shuffle();
                         break;
 
                     case 4:
@@ -106,7 +108,10 @@ namespace Spotify
                             Console.WriteLine(_album.title);
                         }
                         Console.ReadLine();
-                        Console.WriteLine("Album " + album.title + "is playing");
+                        Console.WriteLine("Album " + album.title + "is playing"); 
+                        song.PlayPause();
+                        song.Next();
+                        song.Shuffle();
                         break;
 
                     case 5:
@@ -118,6 +123,9 @@ namespace Spotify
                         }
                         Console.ReadLine();
                         Console.WriteLine("Artist " + artist.name + "playing");
+                        song.PlayPause();
+                        song.Next();
+                        song.Shuffle();
                         break;
 
                     case 6:
