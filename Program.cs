@@ -8,12 +8,12 @@ namespace Spotify
         static void Main(string[] args)
         {
             List<Song> songlist = new List<Song>();
-            songlist.Add(new Song("ELEMENT. ", "Kendrick Lamar ", "rap ", "3:16"));
-            songlist.Add(new Song("Lucid Dreams", "Juice WRLD", "rap", "4:00"));
-            songlist.Add(new Song("NO BYSTANDERS", "Travis Scott", "rap", "3:10"));
-            songlist.Add(new Song("Stronger", "Kanye West", "rap", "4:00"));
+            songlist.Add(new Song(1, "ELEMENT. ", "Kendrick Lamar ", "rap ", "3:16"));
+            songlist.Add(new Song(2, "Lucid Dreams", "Juice WRLD", "rap", "4:00"));
+            songlist.Add(new Song(3, "NO BYSTANDERS", "Travis Scott", "rap", "3:10"));
+            songlist.Add(new Song(4, "Stronger", "Kanye West", "rap", "4:00"));
 
-            Song song = new Song("", "", "", "");
+            Song song = new Song(0, "", "", "", "");
             song.getSong();
             
 
@@ -40,31 +40,29 @@ namespace Spotify
 
             List<User> users = new List<User>();
 
-            User user = new User(0,"", "");
-            user.getUser();
+            //User user = new User(0,"", "");
+            //user.getUser();
 
+            while (true) {
             Console.WriteLine("1: Do you want to create a playlist?");
             Console.WriteLine("2: Do you want to select a playlist?");
             Console.WriteLine("3: Do you want to play a song?");
             Console.WriteLine("4: Do you want to listen to an album?");
             Console.WriteLine("5: Do you want to listen to an artist?");
             Console.WriteLine("6: Do you want to select a user?");
-            Console.WriteLine("7: Do you want to add a user?");
-
-            while (true) {
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
                     case 1:
                         Playlist playlist1 = new Playlist(1, "Rap");
-                        playlist1.AddSongs(new Song("Lose Yourself", "Eminem", "rap", "5:12"));
-                        playlist1.AddSongs(new Song("Fair Trade (with Travis Scott)", "Drake featuring Travis Scott", "rap", "3:42"));
+                        playlist1.AddSongs(new Song(1, "Lose Yourself", "Eminem", "rap", "5:12"));
+                        playlist1.AddSongs(new Song(2, "Fair Trade (with Travis Scott)", "Drake featuring Travis Scott", "rap", "3:42"));
                         Playlist playlist2 = new Playlist(2, "Pop");
-                        playlist1.AddSongs(new Song("Style", "Taylor Swift", "pop", "3:03"));
-                        playlist1.AddSongs(new Song("Shape Of You", "Ed Sheeran", "pop", "3:10"));
+                        playlist1.AddSongs(new Song(1, "Style", "Taylor Swift", "pop", "3:03"));
+                        playlist1.AddSongs(new Song(2, "Shape Of You", "Ed Sheeran", "pop", "3:10"));
                         Playlist playlist3 = new Playlist(3, "Gym");
-                        playlist1.AddSongs(new Song("A New Beginning", "Sub Zero Project", "hardstyle", "2.58"));
-                        playlist1.AddSongs(new Song("Lost In Paradise - Edit", "Max Enforcer", "hardstyle", "3:24"));
+                        playlist1.AddSongs(new Song(1, "A New Beginning", "Sub Zero Project", "hardstyle", "2.58"));
+                        playlist1.AddSongs(new Song(2, "Lost In Paradise - Edit", "Max Enforcer", "hardstyle", "3:24"));
 
                         playlists.Add(playlist1);
                         playlists.Add(playlist2);
@@ -95,9 +93,7 @@ namespace Spotify
                         
                         Console.ReadLine();
                         Console.WriteLine("Song " + song.title + "is playing");
-                        song.PlayPause();
-                        song.Next();
-                        song.Shuffle();
+                        song.PauseNextShuffle();
                         break;
 
                     case 4:
@@ -108,10 +104,8 @@ namespace Spotify
                             Console.WriteLine(_album.title);
                         }
                         Console.ReadLine();
-                        Console.WriteLine("Album " + album.title + "is playing"); 
-                        song.PlayPause();
-                        song.Next();
-                        song.Shuffle();
+                        Console.WriteLine("Album " + album.title + "is playing");
+                        song.PauseNextShuffle();
                         break;
 
                     case 5:
@@ -123,9 +117,7 @@ namespace Spotify
                         }
                         Console.ReadLine();
                         Console.WriteLine("Artist " + artist.name + "playing");
-                        song.PlayPause();
-                        song.Next();
-                        song.Shuffle();
+                        song.PauseNextShuffle();
                         break;
 
                     case 6:
@@ -150,15 +142,14 @@ namespace Spotify
 
                         
                         Console.ReadLine();
-                        Console.WriteLine("User" + user.userName + "selected");
-                        break;
-                    case 7:
+                        Console.WriteLine("User " + "selected");
                         Console.WriteLine("Add user");
                         foreach (User _user in users)
                         {
                             Console.WriteLine(_user.userPlaylists);
                         }
                         Console.ReadLine();
+                        Console.WriteLine("User added");
                         
                         break;
                 }
