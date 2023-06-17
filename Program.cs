@@ -140,7 +140,9 @@ namespace Spotify
                         Playlist playlist11 = new Playlist(2, "Marijnslijst");
                         Playlist playlist12 = new Playlist(3, "Pop");
 
-                        //user.Add(user1);
+                        user.Add(user1);
+                        user.Add(user2);
+                        user.Add(user3);
 
                         Console.ReadLine();
                         Console.WriteLine("User " + "selected");
