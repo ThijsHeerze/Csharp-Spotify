@@ -2,6 +2,7 @@
 
 public class Artist
 {
+	public int id { get; set; }
 	public string name { get; set; }
 	public string song { get; set; }
 	public string album { get; set; }

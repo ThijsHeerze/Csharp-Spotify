@@ -18,11 +18,11 @@ namespace Spotify
             
 
             List<Album> albumlist = new List<Album>();
-            albumlist.Add(new Album("Juice WRLD", "Goodbye & Good Riddance"));
-            albumlist.Add(new Album("Drake", "Take Care"));
-            albumlist.Add(new Album("Kendrick Lamar", "Mr. Morale & The Big Steppers"));
+            albumlist.Add(new Album(1, "Juice WRLD", "Goodbye & Good Riddance"));
+            albumlist.Add(new Album(2, "Drake", "Take Care"));
+            albumlist.Add(new Album(3, "Kendrick Lamar", "Mr. Morale & The Big Steppers"));
 
-            Album album = new Album("", "");
+            Album album = new Album(0,"", "");
             album.getAlbum();
 
             Artist artist = new Artist("", "", "");
@@ -40,7 +40,7 @@ namespace Spotify
 
             List<User> users = new List<User>();
 
-            //User user = new User(0,"", "");
+            User user = new User(0,"", "");
             //user.getUser();
 
             while (true) {
@@ -140,7 +140,8 @@ namespace Spotify
                         Playlist playlist11 = new Playlist(2, "Marijnslijst");
                         Playlist playlist12 = new Playlist(3, "Pop");
 
-                        
+                        //user.Add(user1);
+
                         Console.ReadLine();
                         Console.WriteLine("User " + "selected");
                         Console.WriteLine("Add user");
