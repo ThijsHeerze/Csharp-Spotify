@@ -22,7 +22,7 @@ public class Song
     {
         return title;
     }
-    //alles met int
+
     public void PauseNextShuffle()
     {
         Console.WriteLine("1: Pause");

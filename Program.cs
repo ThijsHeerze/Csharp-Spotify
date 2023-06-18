@@ -8,40 +8,36 @@ namespace Spotify
         static void Main(string[] args)
         {
             List<Song> songlist = new List<Song>();
-            songlist.Add(new Song(1, "ELEMENT. ", "Kendrick Lamar ", "rap ", "3:16"));
+            songlist.Add(new Song(1, "Money Trees ", "Kendrick Lamar ", "rap ", "3:16"));
             songlist.Add(new Song(2, "Lucid Dreams", "Juice WRLD", "rap", "4:00"));
-            songlist.Add(new Song(3, "NO BYSTANDERS", "Travis Scott", "rap", "3:10"));
-            songlist.Add(new Song(4, "Stronger", "Kanye West", "rap", "4:00"));
+            songlist.Add(new Song(3, "goosebumps", "Travis Scott", "rap", "3:10"));
+            songlist.Add(new Song(4, "Blood On The Leaves", "Kanye West", "rap", "4:00"));
 
             Song song = new Song(0, "", "", "", "");
-            //song.getSong();
             
 
             List<Album> albumlist = new List<Album>();
-            albumlist.Add(new Album(1, "Juice WRLD", "Goodbye & Good Riddance"));
-            albumlist.Add(new Album(2, "Drake", "Take Care"));
-            albumlist.Add(new Album(3, "Kendrick Lamar", "Mr. Morale & The Big Steppers"));
+            albumlist.Add(new Album(1, "1: Juice WRLD", "Goodbye & Good Riddance"));
+            albumlist.Add(new Album(2, "2: Drake", "Take Care"));
+            albumlist.Add(new Album(3, "3: Kendrick Lamar", "Mr. Morale & The Big Steppers"));
+            albumlist.Add(new Album(3, "4: Kanye West", "Graduation"));
 
-            Album album = new Album(0,"", "");
-            //album.getAlbum();
+            Album album = new Album(0, "", "");
 
-            Artist artist = new Artist("", "", "");
-            //artist.getArtist();
+            Artist artist = new Artist(0, "", "", "");
 
             List<Artist> artistlist = new List<Artist>();
-            artistlist.Add(new Artist("Kendrick Lamar", "Money Trees", "good kid m.A.A.d city"));
-            artistlist.Add(new Artist("Juice WRLD", "Don't Fall Off", "The Party Never Ends"));
-            artistlist.Add(new Artist("Eminem", "The Marshall Mathers LP", "The Real Slim Shady"));
+            artistlist.Add(new Artist(1, "1: Kendrick Lamar", "Money Trees", "good kid m.A.A.d city"));
+            artistlist.Add(new Artist(2, "2: Juice WRLD", "Don't Fall Off", "The Party Never Ends"));
+            artistlist.Add(new Artist(3, "3: Eminem", "The Marshall Mathers LP", "The Real Slim Shady"));
 
             List<Playlist> playlists = new List<Playlist>();
 
             Playlist playlist = new Playlist(0, "");
-            //playlist.getPlaylist();
 
             List<User> users = new List<User>();
 
             User user = new User(0,"", "");
-            //user.getUser();
 
             while (true) {
             Console.WriteLine("1: Do you want to create a playlist?");
@@ -151,11 +147,25 @@ namespace Spotify
 
                         Console.ReadLine();
                         Console.WriteLine("User " + user.name + "selected");
-                        Console.WriteLine(user.name + "playlists");
-                        foreach (User _user in users)
+
+                        playlists.Add(playlist4);
+                        playlists.Add(playlist5);
+                        playlists.Add(playlist6);
+
+                        playlists.Add(playlist7);
+                        playlists.Add(playlist8);
+                        playlists.Add(playlist9);
+
+                        playlists.Add(playlist10);
+                        playlists.Add(playlist11);
+                        playlists.Add(playlist12);
+                        
+                        foreach (Playlist _playlist in playlists)
                         {
-                            Console.WriteLine(_user.playlists);
+                            Console.WriteLine(_playlist.name);
                         }
+                        Console.WriteLine(user.name + "playlists");
+                        
                         Console.WriteLine("Add user?");
                         Console.ReadLine();
                         Console.WriteLine("User added");

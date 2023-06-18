@@ -7,8 +7,9 @@ public class Artist
 	public string song { get; set; }
 	public string album { get; set; }
 
-    public Artist(string _name, string _song, string _album)
+    public Artist(int id, string _name, string _song, string _album)
 	{
+		this.id = id;
 		this.name = _name;
 		this.song = _song;
 		this.album = _album;
