@@ -2,18 +2,18 @@
 
 public class Playlist
 {
-    public int playlistId { get; set; }
-    public string playlistName { get; set; }
+    public int id { get; set; }
+    public string name { get; set; }
     List<Song> songs = new List<Song>();
-	public Playlist(int playlistId, string playlistName)
+	public Playlist(int _id, string _name)
 	{
-        this.playlistId = playlistId;
-        this.playlistName = playlistName;
+        this.id = _id;
+        this.name = _name;
 	}
 
     public string getPlaylist()
     {
-        return playlistName;
+        return name;
     }
 
     public void AddSongs(Song song)
@@ -23,6 +23,6 @@ public class Playlist
 
     public string ShowPlaylist()
     {
-        return playlistName;
+        return name;
     }
 }

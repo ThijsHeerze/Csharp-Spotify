@@ -9,13 +9,13 @@ public class Song
     public string genre { get; set; }
     public string duration { get; set; }
 
-    public Song(int id, string title, string artist, string genre, string duration)
+    public Song(int _id, string _title, string _artist, string _genre, string _duration)
     {
-        this.id = id;
-        this.title = title;
-        this.artist = artist;
-        this.genre = genre;
-        this.duration = duration;
+        this.id = _id;
+        this.title = _title;
+        this.artist = _artist;
+        this.genre = _genre;
+        this.duration = _duration;
     }
 
     public string getSong()

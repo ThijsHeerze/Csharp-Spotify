@@ -14,7 +14,7 @@ namespace Spotify
             songlist.Add(new Song(4, "Stronger", "Kanye West", "rap", "4:00"));
 
             Song song = new Song(0, "", "", "", "");
-            song.getSong();
+            //song.getSong();
             
 
             List<Album> albumlist = new List<Album>();
@@ -23,10 +23,10 @@ namespace Spotify
             albumlist.Add(new Album(3, "Kendrick Lamar", "Mr. Morale & The Big Steppers"));
 
             Album album = new Album(0,"", "");
-            album.getAlbum();
+            //album.getAlbum();
 
             Artist artist = new Artist("", "", "");
-            artist.getArtist();
+            //artist.getArtist();
 
             List<Artist> artistlist = new List<Artist>();
             artistlist.Add(new Artist("Kendrick Lamar", "Money Trees", "good kid m.A.A.d city"));
@@ -36,7 +36,7 @@ namespace Spotify
             List<Playlist> playlists = new List<Playlist>();
 
             Playlist playlist = new Playlist(0, "");
-            playlist.getPlaylist();
+            //playlist.getPlaylist();
 
             List<User> users = new List<User>();
 
@@ -76,10 +76,10 @@ namespace Spotify
                         
                         foreach (Playlist _playlist in playlists)
                         {
-                            Console.WriteLine(_playlist.playlistId); Console.WriteLine(_playlist.playlistName);
+                            Console.WriteLine(_playlist.id); Console.WriteLine(_playlist.name);
                         }
                         Console.ReadLine();
-                        Console.WriteLine("playlist " + playlist.playlistName + "is playing");
+                        Console.WriteLine("playlist " + playlist.name + "is playing");
                         break;
 
 
@@ -124,9 +124,10 @@ namespace Spotify
                         Console.WriteLine("Select an user");
                         foreach (User _user in users)
                         {
-                            Console.WriteLine(_user.userName);
+                            Console.WriteLine(_user.name);
                         }
                         
+                        //new users
                         User user1 = new User(1, "Thijs", "");
                         Playlist playlist4 = new Playlist(1, "Rap");
                         Playlist playlist5 = new Playlist(2, "Pop");
@@ -140,20 +141,24 @@ namespace Spotify
                         Playlist playlist11 = new Playlist(2, "Marijnslijst");
                         Playlist playlist12 = new Playlist(3, "Pop");
 
-                        user.Add(user1);
-                        user.Add(user2);
-                        user.Add(user3);
-
-                        Console.ReadLine();
-                        Console.WriteLine("User " + "selected");
-                        Console.WriteLine("Add user");
+                        users.Add(user1);
+                        users.Add(user2);
+                        users.Add(user3);
                         foreach (User _user in users)
                         {
-                            Console.WriteLine(_user.userPlaylists);
+                            Console.WriteLine(_user.name);
                         }
+
+                        Console.ReadLine();
+                        Console.WriteLine("User " + user.name + "selected");
+                        Console.WriteLine(user.name + "playlists");
+                        foreach (User _user in users)
+                        {
+                            Console.WriteLine(_user.playlists);
+                        }
+                        Console.WriteLine("Add user?");
                         Console.ReadLine();
                         Console.WriteLine("User added");
-                        
                         break;
                 }
             }

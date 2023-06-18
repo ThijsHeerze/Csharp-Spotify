@@ -7,12 +7,11 @@ public class Artist
 	public string song { get; set; }
 	public string album { get; set; }
 
-	//constructor
-    public Artist(string name, string song, string album)
+    public Artist(string _name, string _song, string _album)
 	{
-		this.name = name;
-		this.song = song;
-		this.album = album;
+		this.name = _name;
+		this.song = _song;
+		this.album = _album;
     }
 
 	public string getArtist()

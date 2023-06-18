@@ -2,18 +2,18 @@
 
 public class User
 {
-	public int userId { get; set; }
-	public string userName { get; set; }
-	public string userPlaylists { get; set; }
-	public User(int userId, string userName, string userPlaylists)
+	public int id { get; set; }
+	public string name { get; set; }
+	public string playlists { get; set; }
+	public User(int _id, string _name, string _playlists)
 	{
-		this.userId = userId;
-		this.userName = userName;
-		this.userPlaylists = userPlaylists;
+		this.id = _id;
+		this.name = _name;
+		this.playlists = _playlists;
 	}
 
 	public string getUser()
 	{
-		return userName;
+		return name;
 	}
 }

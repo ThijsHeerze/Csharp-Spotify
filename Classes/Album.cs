@@ -7,11 +7,11 @@ public class Album
     public string artist { get; set; }
 	public string title { get; set; }
 
-    public Album(int id, string artist, string title)
+    public Album(int _id, string _artist, string _title)
     {
-        this.id = id;
-        this.artist = artist;
-        this.title = title;
+        this.id = _id;
+        this.artist = _artist;
+        this.title = _title;
 	}
     public string getAlbum()
     {
