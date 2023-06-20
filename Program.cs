@@ -8,28 +8,28 @@ namespace Spotify
         static void Main(string[] args)
         {
             List<Song> songlist = new List<Song>();
-            songlist.Add(new Song(1, "Money Trees ", "Kendrick Lamar ", "rap ", "3:16"));
-            songlist.Add(new Song(2, "Lucid Dreams", "Juice WRLD", "rap", "4:00"));
-            songlist.Add(new Song(3, "goosebumps", "Travis Scott", "rap", "3:10"));
-            songlist.Add(new Song(4, "Blood On The Leaves", "Kanye West", "rap", "4:00"));
+            songlist.Add(new Song(1, "1. Money Trees ", "Kendrick Lamar ", "rap ", "3:16"));
+            songlist.Add(new Song(2, "2. Lucid Dreams", "Juice WRLD", "rap", "4:00"));
+            songlist.Add(new Song(3, "3. goosebumps", "Travis Scott", "rap", "3:10"));
+            songlist.Add(new Song(4, "4. Blood On The Leaves", "Kanye West", "rap", "4:00"));
 
             Song song = new Song(0, "", "", "", "");
             
 
             List<Album> albumlist = new List<Album>();
-            albumlist.Add(new Album(1, "1: Juice WRLD", "Goodbye & Good Riddance"));
-            albumlist.Add(new Album(2, "2: Drake", "Take Care"));
-            albumlist.Add(new Album(3, "3: Kendrick Lamar", "Mr. Morale & The Big Steppers"));
-            albumlist.Add(new Album(3, "4: Kanye West", "Graduation"));
+            albumlist.Add(new Album(1, "Juice WRLD", "1. Goodbye & Good Riddance"));
+            albumlist.Add(new Album(2, "Drake", "2. Take Care"));
+            albumlist.Add(new Album(3, "Kendrick Lamar",  "3. Mr. Morale & The Big Steppers"));
+            albumlist.Add(new Album(3, "Kanye West", "4. Graduation"));
 
             Album album = new Album(0, "", "");
 
             Artist artist = new Artist(0, "", "", "");
 
             List<Artist> artistlist = new List<Artist>();
-            artistlist.Add(new Artist(1, "1: Kendrick Lamar", "Money Trees", "good kid m.A.A.d city"));
-            artistlist.Add(new Artist(2, "2: Juice WRLD", "Don't Fall Off", "The Party Never Ends"));
-            artistlist.Add(new Artist(3, "3: Eminem", "The Marshall Mathers LP", "The Real Slim Shady"));
+            artistlist.Add(new Artist(1, "1. Kendrick Lamar", "Money Trees", "good kid m.A.A.d city"));
+            artistlist.Add(new Artist(2, "2. Juice WRLD", "Don't Fall Off", "The Party Never Ends"));
+            artistlist.Add(new Artist(3, "3. Eminem", "The Marshall Mathers LP", "The Real Slim Shady"));
 
             List<Playlist> playlists = new List<Playlist>();
 
@@ -76,6 +76,8 @@ namespace Spotify
                         }
                         Console.ReadLine();
                         Console.WriteLine("playlist " + playlist.name + "is playing");
+                        //Console.WriteLine("song " + song.title + "is playing");
+                        song.PauseNextShuffle();
                         break;
 
 
@@ -124,15 +126,15 @@ namespace Spotify
                         }
                         
                         //new users
-                        User user1 = new User(1, "Thijs", "");
+                        User user1 = new User(1, "1. Thijs", "");
                         Playlist playlist4 = new Playlist(1, "Rap");
                         Playlist playlist5 = new Playlist(2, "Pop");
                         Playlist playlist6 = new Playlist(3, "Gym");
-                        User user2 = new User(2, "Floor", "");
+                        User user2 = new User(2, "2. Floor", "");
                         Playlist playlist7 = new Playlist(1, "Dance");
                         Playlist playlist8 = new Playlist(2, "Pop");
                         Playlist playlist9 = new Playlist(3, "Summer");
-                        User user3 = new User(3, "Marijn", "");
+                        User user3 = new User(3, "3. 1Marijn", "");
                         Playlist playlist10 = new Playlist(1, "Marijn");
                         Playlist playlist11 = new Playlist(2, "Marijnslijst");
                         Playlist playlist12 = new Playlist(3, "Pop");
