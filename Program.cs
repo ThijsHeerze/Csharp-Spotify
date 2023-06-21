@@ -8,10 +8,10 @@ namespace Spotify
         static void Main(string[] args)
         {
             List<Song> songlist = new List<Song>();
-            songlist.Add(new Song(1, "1. Money Trees ", "Kendrick Lamar ", "rap ", "3:16"));
-            songlist.Add(new Song(2, "2. Lucid Dreams", "Juice WRLD", "rap", "4:00"));
-            songlist.Add(new Song(3, "3. goosebumps", "Travis Scott", "rap", "3:10"));
-            songlist.Add(new Song(4, "4. Blood On The Leaves", "Kanye West", "rap", "4:00"));
+            songlist.Add(new Song(1, "Money Trees ", "Kendrick Lamar ", "rap ", "3:16"));
+            songlist.Add(new Song(2, "Lucid Dreams", "Juice WRLD", "rap", "4:00"));
+            songlist.Add(new Song(3, "goosebumps", "Travis Scott", "rap", "3:10"));
+            songlist.Add(new Song(4, "Blood On The Leaves", "Kanye West", "rap", "4:00"));
 
             Song song = new Song(0, "", "", "", "");
             
@@ -27,9 +27,9 @@ namespace Spotify
             Artist artist = new Artist(0, "", "", "");
 
             List<Artist> artistlist = new List<Artist>();
-            artistlist.Add(new Artist(1, "1. Kendrick Lamar", "Money Trees", "good kid m.A.A.d city"));
-            artistlist.Add(new Artist(2, "2. Juice WRLD", "Don't Fall Off", "The Party Never Ends"));
-            artistlist.Add(new Artist(3, "3. Eminem", "The Marshall Mathers LP", "The Real Slim Shady"));
+            artistlist.Add(new Artist(1, "Kendrick Lamar", "Money Trees", "good kid m.A.A.d city"));
+            artistlist.Add(new Artist(2, "Juice WRLD", "Don't Fall Off", "The Party Never Ends"));
+            artistlist.Add(new Artist(3, "Eminem", "The Marshall Mathers LP", "The Real Slim Shady"));
 
             List<Playlist> playlists = new List<Playlist>();
 
@@ -76,65 +76,73 @@ namespace Spotify
                         }
                         Console.ReadLine();
                         Console.WriteLine("playlist " + playlist.name + "is playing");
-                        //Console.WriteLine("song " + song.title + "is playing");
                         song.PauseNextShuffle();
                         break;
 
 
                     case 3:
                         Console.WriteLine("What song do you want to listen to?");
-                        
+                        int s = 0;
                         foreach (Song _song in songlist)
                         {
+                            Console.Write(s + " - ");
                             Console.WriteLine(_song.title);
+                            s++;
                         }
                         
                         Console.ReadLine();
-                        Console.WriteLine("Song " + song.title + "is playing");
+                        Console.WriteLine("Song " + songlist.ElementAt(int.Parse(Console.ReadLine())).title + " is playing");
                         song.PauseNextShuffle();
                         break;
 
                     case 4:
                         Console.WriteLine("What album do you want to listen to?");
-                        
+                        int a = 0;
                         foreach (Album _album in albumlist)
                         {
+                            Console.Write(a + " - ");
                             Console.WriteLine(_album.title);
+                            a++;
                         }
                         Console.ReadLine();
-                        Console.WriteLine("Album " + album.title + "is playing");
+                        Console.WriteLine("Album " + albumlist.ElementAt(int.Parse(Console.ReadLine())).title + " is playing");
                         song.PauseNextShuffle();
                         break;
 
                     case 5:
                         Console.WriteLine("Who do you want to listen to?");
-                        
+                        int i = 0;
                         foreach (Artist _artist in artistlist)
                         {
+                            Console.Write(i + " - ");
                             Console.WriteLine(_artist.name);
+                            i++;
                         }
                         Console.ReadLine();
-                        Console.WriteLine("Artist " + artist.name + "playing");
+                        Console.WriteLine("Artist " + artistlist.ElementAt(int.Parse(Console.ReadLine())).name + " playing");
                         song.PauseNextShuffle();
                         break;
 
                     case 6:
                         Console.WriteLine("Select an user");
+                        i = 0;
                         foreach (User _user in users)
                         {
+                            Console.Write(i + " - ");
                             Console.WriteLine(_user.name);
+                            i++;
                         }
                         
                         //new users
-                        User user1 = new User(1, "1. Thijs", "");
+                        User user1 = new User(1, "Thijs", "");
                         Playlist playlist4 = new Playlist(1, "Rap");
                         Playlist playlist5 = new Playlist(2, "Pop");
                         Playlist playlist6 = new Playlist(3, "Gym");
-                        User user2 = new User(2, "2. Floor", "");
+                        User user2 = new User(2, "Floor", "");
                         Playlist playlist7 = new Playlist(1, "Dance");
                         Playlist playlist8 = new Playlist(2, "Pop");
                         Playlist playlist9 = new Playlist(3, "Summer");
-                        User user3 = new User(3, "3. 1Marijn", "");
+                        User user3 = new User(3, "Marijn", "");
                         Playlist playlist10 = new Playlist(1, "Marijn");
                         Playlist playlist11 = new Playlist(2, "Marijnslijst");
                         Playlist playlist12 = new Playlist(3, "Pop");
