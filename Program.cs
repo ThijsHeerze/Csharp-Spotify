@@ -31,14 +31,12 @@ namespace Spotify
             artistlist.Add(new Artist(1, "Kendrick Lamar", "Money Trees", "good kid m.A.A.d city"));
             artistlist.Add(new Artist(2, "Juice WRLD", "Don't Fall Off", "The Party Never Ends"));
             artistlist.Add(new Artist(3, "Eminem", "The Marshall Mathers LP", "The Real Slim Shady"));
-
+            
+            List<User> users = new List<User>();
             List<Playlist> playlists = new List<Playlist>();
 
-            Playlist playlist = new Playlist(0,"");
-
-            List<User> users = new List<User>();
-
             User user = new User(0,"Thijs","");
+            Playlist playlist = new Playlist(1, "Playlist", user); 
 
             while (true) {
             Console.WriteLine("1: Do you want to create a playlist?");
@@ -54,10 +52,10 @@ namespace Spotify
                         Playlist playlist1 = new Playlist(1, "Rap", user);
                         playlist1.AddSongs(new Song(1, "Lose Yourself", "Eminem", "rap", "5:12"));
                         playlist1.AddSongs(new Song(2, "Fair Trade (with Travis Scott)", "Drake featuring Travis Scott", "rap", "3:42"));
-                        Playlist playlist2 = new Playlist(2, "Pop");
+                        Playlist playlist2 = new Playlist(2, "Pop", user);
                         playlist2.AddSongs(new Song(1, "Style", "Taylor Swift", "pop", "3:03"));
                         playlist2.AddSongs(new Song(2, "Shape Of You", "Ed Sheeran", "pop", "3:10"));
-                        Playlist playlist3 = new Playlist(3, "Gym");
+                        Playlist playlist3 = new Playlist(3, "Gym", user);
                         playlist3.AddSongs(new Song(1, "A New Beginning", "Sub Zero Project", "hardstyle", "2.58"));
                         playlist3.AddSongs(new Song(2, "Lost In Paradise - Edit", "Max Enforcer", "hardstyle", "3:24"));
 
