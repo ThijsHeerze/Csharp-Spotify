@@ -178,8 +178,7 @@ namespace Spotify
                             Console.WriteLine(_user.name);
                             u++;
                         }
-                        Console.WriteLine("User " + users.ElementAt(int.Parse(Console.ReadLine())).name + " selected");                                           
-                        
+                        Console.WriteLine("User " + users.ElementAt(int.Parse(Console.ReadLine())).name + " selected");                                                                   
 
                         Console.WriteLine(users.ElementAt(0).name + " playlists");
                         int _p = 0;
