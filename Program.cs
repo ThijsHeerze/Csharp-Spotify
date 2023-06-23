@@ -18,10 +18,10 @@ namespace Spotify
             
 
             List<Album> albumlist = new List<Album>();
-            albumlist.Add(new Album(1, "Juice WRLD", "1. Goodbye & Good Riddance"));
-            albumlist.Add(new Album(2, "Drake", "2. Take Care"));
-            albumlist.Add(new Album(3, "Kendrick Lamar",  "3. Mr. Morale & The Big Steppers"));
-            albumlist.Add(new Album(3, "Kanye West", "4. Graduation"));
+            albumlist.Add(new Album(1, "Juice WRLD", "Goodbye & Good Riddance"));
+            albumlist.Add(new Album(2, "Drake", "Take Care"));
+            albumlist.Add(new Album(3, "Kendrick Lamar",  "Mr. Morale & The Big Steppers"));
+            albumlist.Add(new Album(3, "Kanye West", "Graduation"));
 
             Album album = new Album(0, "", "");
 
@@ -70,9 +70,7 @@ namespace Spotify
                         Console.WriteLine("What playlist do you want to listen to?");
                         int p = 0;
                         foreach (Playlist _playlist in playlists)
-
-                        {
-                           
+                        {                           
                             Console.Write(p + " - ");
                             Console.WriteLine(_playlist.name);
                             p++;
@@ -87,7 +85,6 @@ namespace Spotify
                         song.PauseNextShuffle();
                             
                         break;
-
 
                     case 3:
                         Console.WriteLine("What song do you want to listen to?");
@@ -182,18 +179,20 @@ namespace Spotify
                             u++;
                         }
                         Console.WriteLine("User " + users.ElementAt(int.Parse(Console.ReadLine())).name + " selected");                                           
+                        
+
+                        Console.WriteLine(users.ElementAt(0).name + " playlists");
+                        int _p = 0;
+                        foreach (Playlist _playlist in users.ElementAt(0).playlists)
+                        {
+                            Console.Write(_p + " - ");
+                            Console.WriteLine(_playlist.name);
+                            _p++;
+                        }
+
                         Console.WriteLine("Add user?");
                         Console.WriteLine("User " + users.ElementAt(int.Parse(Console.ReadLine())).name + " added");
 
-                        Console.WriteLine(users.ElementAt(int.Parse(Console.ReadLine())).name + " playlists");
-                            int _p = 0;
-                            foreach (Playlist _playlist in users.ElementAt(0).playlists)
-                            {
-                                Console.Write(_p + " - ");
-                                Console.WriteLine(_playlist.name);
-                                _p++;
-                            }
-                            
                         break;
                 }
             }

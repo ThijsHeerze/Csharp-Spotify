@@ -36,7 +36,7 @@ public class Song
                 break;
 
                 case 2:
-                    Console.WriteLine("Next song " + title.ElementAt(int.Parse(Console.ReadLine())) + " is playing");
+                    Console.WriteLine("Next song " + title + " is playing");
                 break;
 
                 case 3:
