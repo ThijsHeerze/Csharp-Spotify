@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Xml.Linq;
 
 namespace Spotify
@@ -178,9 +179,8 @@ namespace Spotify
                             Console.WriteLine(_user.name);
                             u++;
                         }
-                        Console.WriteLine("User " + users.ElementAt(int.Parse(Console.ReadLine())).name + " selected");                                                                   
+                        Console.WriteLine("User " + users.ElementAt(int.Parse(Console.ReadLine())).name + " selected. This are his/her playlists");                                                                   
 
-                        Console.WriteLine(users.ElementAt(0).name + " playlists");
                         int _p = 0;
                         foreach (Playlist _playlist in users.ElementAt(0).playlists)
                         {
@@ -189,7 +189,7 @@ namespace Spotify
                             _p++;
                         }
 
-                        Console.WriteLine("Add user?");
+                        Console.WriteLine("Add user? 1 = yes, 0 = no");
                         Console.WriteLine("User " + users.ElementAt(int.Parse(Console.ReadLine())).name + " added");
 
                         break;
